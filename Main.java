@@ -6,6 +6,7 @@ class Main {
    
     System.out.println("Wybierz program:");
     System.out.println("1-Sprawdzanie trójkąta");
+    System.out.println("2-Testowanie roku");
     
     int x=scan.nextInt();
     switch(x){
@@ -21,6 +22,16 @@ class Main {
         if(a+b>c&&a+c>b&&b+c>a) System.out.println("Warunek powstania trójkąta został spełniony");
         else System.out.println("Nie istnieje taki trójkąt");
       break;
+
+      case 2:
+        System.out.println("Podaj rok");
+        int rok=scan.nextInt();
+        if(rok % 4 == 0 && rok % 100 != 0 || rok % 400 == 0){
+          System.out.println("Rok "+rok+" jest przestępny");
+        }
+        else System.out.println("Rok "+rok+" nie jest przestępny");
+        break;
+        
     }
   }
 }
