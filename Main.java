@@ -1,19 +1,26 @@
+import java.util.Scanner;
+
 class Main {
   public static void main(String[] args) {
      Scanner scan=new Scanner(System.in);
    
     System.out.println("Wybierz program:");
-    System.out.println("1-Tabliczba mnożenia");
+    System.out.println("1-Sprawdzanie trójkąta");
     
     int x=scan.nextInt();
     switch(x){
       case 1:
-    int[][] mnozenie = new int[11][11];
+        int a,b,c;
+      System.out.println("Podaj bok A");
+        a=scan.nextInt();
+        System.out.println("Podaj bok B");
+        b=scan.nextInt();
+        System.out.println("Podaj bok C");
+        c=scan.nextInt();
 
-    for(int i=0;i<11;i++){
-      for(int j=0;j<11;j++){
-        mnozenie[i][j]=i*j;
-      }
+        if(a+b>c&&a+c>b&&b+c>a) System.out.println("Warunek powstania trójkąta został spełniony");
+        else System.out.println("Nie istnieje taki trójkąt");
+      break;
     }
   }
 }
