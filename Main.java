@@ -7,6 +7,7 @@ class Main {
     System.out.println("Wybierz program:");
     System.out.println("1-Sprawdzanie trójkąta");
     System.out.println("2-Testowanie roku");
+     System.out.println("3-Silnia");
     
     int x=scan.nextInt();
     switch(x){
@@ -31,7 +32,17 @@ class Main {
         }
         else System.out.println("Rok "+rok+" nie jest przestępny");
         break;
+
+      case 3:
+        System.out.println("Podaj n");
+        int n= scan.nextInt();
+        int silnia=1;
         
+        for(int i=1;i<n+1;i++){
+         silnia=silnia*i;
+        }
+        System.out.print("wynik: "+silnia);
+        break;
     }
   }
 }
